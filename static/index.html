@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/css/app.css">
+
+  <!--
+    Loads the radiodan client library
+    provided by the middleware.
+
+    This exposes a `radiodan` object in
+    javascript that you can use to control
+    the player.
+  -->
+  <script src="/radiodan/client.js"></script>
+  <title>Radiodan Skeleton App</title>
+</head>
+<body class="container">
+  <div class="row two-thirds column">
+    <div class="explanation ">
+      <h1>Play some sounds</h1>
+      <p>You can close or reload this page whilst playing and the sound will continue. You can also load the web page on a different computer or phone and remote control.</p>
+    </div><!-- .explanation -->
+
+    <p>Status: <em><span id="status">unknown</span></em></p>
+
+    <button
+      class="button-primary"
+      onclick="playFromButton(this)"
+      data-url="http://downloads.bbc.co.uk/podcasts/6music/trintro/trintro_20150105-0300a.mp3">
+      Play a podcast stream
+    </button>
+
+    <button
+      class="button-primary"
+      onclick="playFromButton(this)"
+      data-url="crowd.mp3">
+      Play crowd
+    </button>
+
+    <button
+      class="button stop"
+      onclick="stop()">
+      Stop
+    </button>
+  </div><!-- .row -->
+
+  <script src="/js/app.js"></script>
+</body><!-- .container -->
+</html>

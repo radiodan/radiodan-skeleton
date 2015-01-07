@@ -68,7 +68,6 @@ function cheer() {
 }
 
 function play(fileOrStream) {
-  console.log('database');
   player
     .add({ playlist: [fileOrStream] })
     .then(player.play);

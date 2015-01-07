@@ -1,0 +1,7 @@
+@import url('./lib/normalize.css');
+@import url('./lib/skeleton.css');
+
+.stop {
+  color: white;
+  background-color: red;
+}
