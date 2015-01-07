@@ -1,0 +1,12 @@
+{
+  "dataPath": "/tmp/.radiodan-skeleton",
+  "defaults": {
+    "music": "../audio"
+  },
+  "players": [
+    {
+      "id": "main",
+      "name": "Main Player"
+    }
+  ]
+}
