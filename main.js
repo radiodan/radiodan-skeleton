@@ -34,25 +34,12 @@ var radiodan = client.create();
 // as specified in ./config/radiodan-config.json
 var player = radiodan.player.get('main');
 
-log('test logger')();
-
-// Listen for updates to the database
+// Listen for updates to the music database
 // to make sure that we've loaded any
 // audio files in `./audio` before we try
 // and play them
-player.on('database.update.start', log('database.update.start'));
-player.on('database.update.end', log('database.update.end'));
-player.on('database.modified', log('database.modified'));
+player.on('database.update.end', init);
 
-function log(prefix) {
-  return function () {
-    console.log(prefix);
-  }
-}
-
-function update() {
-  console.log('update');
-}
 
 // Tell the player to update it's database, discovering
 // any audio files in the music directory specified in
@@ -60,13 +47,16 @@ function update() {
 player
   .updateDatabase();
 
-// Wait a bit for database to update
-// setTimeout(cheer, 1000);
-
-function cheer() {
+// When the music database is updated then
+// this will run (see `player.on` code above)
+function init() {
   play('crowd.mp3');
 }
 
+/*
+  General helper function to play a file or
+  stream
+*/
 function play(fileOrStream) {
   player
     .add({ playlist: [fileOrStream] })
