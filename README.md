@@ -16,7 +16,7 @@ A small skeleton application for getting started with Radiodan. It demonstrates:
 
 ## Installation
 
-    git clone
+    git clone https://github.com/radiodan/radiodan-skeleton.git
     cd radiodan-skeleton
     npm install
 
