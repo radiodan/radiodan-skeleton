@@ -38,7 +38,9 @@ var player = radiodan.player.get('main');
 // to make sure that we've loaded any
 // audio files in `./audio` before we try
 // and play them
-player.on('database.update.end', init);
+player.on('database.update.start', function() { console.log('database.update.start'); });
+player.on('database.update.end', function() { console.log('database.update.end'); });
+player.on('database.modified', function() { console.log('database.update.modified'); });
 
 
 // Tell the player to update it's database, discovering
