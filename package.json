@@ -10,8 +10,8 @@
   "author": "Andrew Nicolaou <andrew.nicolaou@bbc.co.uk>",
   "license": "Apache-2",
   "dependencies": {
-    "radiodan": "git+https://github.com/radiodan/radiodan.js",
-    "radiodan-client": "git+https://github.com/radiodan/radiodan-client.js.git",
+    "radiodan": "^1.0.0",
+    "radiodan-client": "^1.0.0",
     "foreman": "~1.2.0",
     "express": "~4.10.7"
   }

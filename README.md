@@ -10,8 +10,8 @@ A small skeleton application for getting started with Radiodan. It demonstrates:
 
 ## Requirements
 
+- Radiodan Messaging Broker[1]
 - mpd
-- rabbitmq
 - node.js
 
 ## Installation
@@ -24,3 +24,4 @@ A small skeleton application for getting started with Radiodan. It demonstrates:
 
     npm start
 
+[1]: https://github.com/radiodan/broker
