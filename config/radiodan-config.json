@@ -6,7 +6,8 @@
   "players": [
     {
       "id": "main",
-      "name": "Main Player"
+      "name": "Main Player",
+      "player","mopidy"
     }
   ]
 }
