@@ -8,6 +8,8 @@ A small skeleton application for getting started with Radiodan. It demonstrates:
 - playing a remote stream
 - playing a local file
 
+See the [Radiodan Client Library documentation](http://radiodan-client.readthedocs.org/en/latest/) for all the commands that you can use.
+
 ## Requirements
 
 - mpd
