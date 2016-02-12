@@ -10,9 +10,9 @@ A small skeleton application for getting started with Radiodan. It demonstrates:
 
 ## Requirements
 
-- Radiodan Messaging Broker[1]
 - mpd
-- node.js
+- node.js / npm
+- OS X / Pi 2 (arm7)
 
 ## Installation
 
@@ -24,4 +24,8 @@ A small skeleton application for getting started with Radiodan. It demonstrates:
 
     npm start
 
-[1]: https://github.com/radiodan/broker
+This project includes the radiodan audio server and radiodan-broker that are installed via NPM.
+
+You can see how to start these by looking in the Procfile.
+
+You can install the server and broker separately if you need more flexibility.
