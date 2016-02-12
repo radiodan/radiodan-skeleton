@@ -1,5 +1,5 @@
-var express  = require('express'),
-    client   = require('radiodan-client');
+var express = require('express'),
+  client = require('radiodan-client');
 
 console.log('Hello');
 
@@ -11,14 +11,16 @@ console.log('Hello');
   http://localhost:5000/ in a web browser
   will load `index.html` in ./static.
 */
-var web    = express(),
-    port   = process.env.PORT || 5000;
+var web = express(),
+  port = process.env.PORT || 5000;
 
 // Use the radiodan middleware to enable
 // the web pages to send commands to this
 // radio
 web.use('/radiodan',
-  client.middleware({crossOrigin: true})
+  client.middleware({
+    crossOrigin: true
+  })
 );
 
 // Make all files in ./static available to web
@@ -38,9 +40,15 @@ var player = radiodan.player.get('main');
 // to make sure that we've loaded any
 // audio files in `./audio` before we try
 // and play them
-player.on('database.update.start', function() { console.log('database.update.start'); });
-player.on('database.update.end', function() { console.log('database.update.end'); });
-player.on('database.modified', function() { console.log('database.update.modified'); });
+player.on('database.update.start', function() {
+  console.log('database.update.start');
+});
+player.on('database.update.end', function() {
+  console.log('database.update.end');
+});
+player.on('database.modified', function() {
+  console.log('database.update.modified');
+});
 
 
 // Tell the player to update it's database, discovering
@@ -61,6 +69,8 @@ function init() {
 */
 function play(fileOrStream) {
   player
-    .add({ playlist: [fileOrStream] })
+    .add({
+      playlist: [fileOrStream]
+    })
     .then(player.play);
 }
