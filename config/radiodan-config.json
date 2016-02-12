@@ -7,7 +7,7 @@
     {
       "id": "main",
       "name": "Main Player",
-      "player":"mopidy"
+      "player":"mpd"
     }
   ]
 }
