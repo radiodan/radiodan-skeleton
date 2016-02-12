@@ -45,6 +45,7 @@ player.on('database.update.start', function() {
 });
 player.on('database.update.end', function() {
   console.log('database.update.end');
+  init();
 });
 player.on('database.modified', function() {
   console.log('database.update.modified');
