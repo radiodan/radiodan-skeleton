@@ -1,3 +1,3 @@
-broker: ./node_modules/.bin/radiodan-broker
-audio: ./node_modules/.bin/radiodan-server ../../config/radiodan-config.json
+broker: npm run broker
+audio: npm run audio
 app: node main.js

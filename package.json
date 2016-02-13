@@ -5,6 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "node_modules/.bin/nf start",
+    "broker": "radiodan-broker",
+    "audio": "radiodan-server ../../config/radiodan-config.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Andrew Nicolaou <andrew.nicolaou@bbc.co.uk>",
