@@ -12,7 +12,7 @@ console.log('Hello');
   will load `index.html` in ./static.
 */
 var web = express(),
-  port = process.env.PORT || 5000;
+  port = process.env.WEB_PORT || process.env.PORT || 5000;
 
 // Use the radiodan middleware to enable
 // the web pages to send commands to this
