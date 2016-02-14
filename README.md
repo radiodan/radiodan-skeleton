@@ -18,6 +18,16 @@ See the [Radiodan Client Library documentation](http://radiodan-client.readthedo
 
 ## Installation
 
+On OS X:
+
+    brew install zmq mpd nodejs
+    
+On raspbian/debian/ubuntu:
+
+    apt-get install mpd libzmq3 libzmq3-dev nodejs
+
+And then on all platforms:
+
     git clone https://github.com/radiodan/radiodan-skeleton.git
     cd radiodan-skeleton
     npm install
