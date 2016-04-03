@@ -64,6 +64,37 @@ function init() {
   play('crowd.mp3');
 }
 
+// Get the button and RGBLED called 'power'
+// Defined in ./config/radiodan-pcb.json
+var powerButton = radiodan.button.get('power');
+var powerLED = radiodan.RGBLED.get('power');
+
+// When the button is released, play the crowd
+// and flash the LED green
+powerButton.on('release', function() {
+  console.log('button was released');
+  play('crowd.mp3');
+  powerLED.emit({
+    colour: [0, 255, 0],
+    yoyo: true
+  });
+});
+
+// When the player stops playing then turn the
+// LED off
+player.on('player', function(player) {
+  console.log('Player has changed', player);
+  if (player.state === 'play') {
+    powerLED.emit({
+      colour: [0, 255, 0]
+    });
+  } else {
+    powerLED.emit({
+      colour: [255, 255, 255]
+    });
+  }
+});
+
 /*
   General helper function to play a file or
   stream

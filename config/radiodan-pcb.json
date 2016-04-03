@@ -1,0 +1,84 @@
+{
+  "buttons": [
+    {
+      "id": "next",
+      "pins": [
+        {
+          "pin": 2,
+          "pull": "up",
+          "pressedIsHigh": false
+        }
+      ]
+    },
+    {
+      "id": "magic",
+      "pins": [
+        {
+          "pin": 7,
+          "pull": "down",
+          "pressedIsHigh": true
+        }
+      ]
+    },
+    {
+      "id": "power",
+      "pins": [
+        {
+          "pin": 3,
+          "pull": "down",
+          "pressedIsHigh": true
+        }
+      ]
+    }
+  ],
+  "rotaryEncoders": [
+    {
+      "id": "magic",
+      "pins": [
+        {
+          "pin": 8,
+          "pull": "up"
+        },
+        {
+          "pin": 9,
+          "pull": "up"
+        }
+      ]
+    },
+    {
+      "id": "volume",
+      "pins": [
+        {
+          "pin": 5,
+          "pull": "up"
+        },
+        {
+          "pin": 4,
+          "pull": "up"
+        }
+      ]
+    }
+  ],
+  "RGBLEDs": [
+    {
+      "id": "magic",
+      "pins": [12,13,14],
+      "colour": [0,0,0],
+      "transitions": {
+        "duration": 750
+      }
+    },
+    {
+      "id": "power",
+      "pins": [6,10,11],
+      "colour": [200, 200, 200],
+      "transitions": {
+        "duration": 750
+      },
+      "initialTransition": {
+        "duration": 5000,
+        "yoyo": true
+      }
+    }
+  ]
+}
